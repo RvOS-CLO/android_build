@@ -153,12 +153,12 @@ function check_product()
         echo "Couldn't locate the top of the tree.  Try setting TOP." >&2
         return
     fi
-    if (echo -n $1 | grep -q -e "^aospa_") ; then
-        AOSPA_BUILD=$(echo -n $1 | sed -e 's/^aospa_//g')
+    if (echo -n $1 | grep -q -e "^rvos_") ; then
+        RVOS_BUILD=$(echo -n $1 | sed -e 's/^rvos_//g')
     else
-        AOSPA_BUILD=
+        RVOS_BUILD=
     fi
-    export AOSPA_BUILD
+    export RVOS_BUILD
 
         TARGET_PRODUCT=$1 \
         TARGET_BUILD_VARIANT= \
